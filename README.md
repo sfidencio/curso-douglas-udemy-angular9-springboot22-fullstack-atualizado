@@ -30,6 +30,13 @@ https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
 
 # Angular
 
+1-Para fazer deploy da aplicação angular, segui esse tutorial:
+
+https://medium.com/geekculture/how-to-easily-deploy-your-first-angular-app-on-heroku-65dd546c8181
+
+2-Não esquecer de mudar o arquivo "enviroment.prod.ts", colocar a url_base da API hospedada no heroku.
+
+
 Referências:
 
 https://gist.github.com/dariye/1cdc25e7a168527f5d035c47f4f9aed3
