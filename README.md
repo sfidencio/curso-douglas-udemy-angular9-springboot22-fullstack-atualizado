@@ -15,3 +15,15 @@ https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creat
 4-Se ocorreu algum erro ou rejeição, podemos forçar o push, caso necessário:
 
 5-git push heroku 'git subtree split --prefix clientes-api/ branch':master --force # force push
+
+
+
+Referências
+
+https://gist.github.com/dariye/1cdc25e7a168527f5d035c47f4f9aed3
+
+https://www.treinaweb.com.br/blog/deploy-de-uma-aplicacao-spring-boot-no-heroku
+
+https://devcenter.heroku.com/articles/heroku-cli
+
+https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creating-a-spring-boot-app
