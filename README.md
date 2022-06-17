@@ -1,5 +1,7 @@
 # Curso Full Stack: Agular9 + SpringBoot 2.2
 
+
+# Dicas de como foi feito o deploy no HEROKU, tanto do FRONT quanto do BACK!
 # JAVA
 
 -Banco de dados utilizado é o H2Database, executando em memória, não persistindo nada no FS(FileSystem).
