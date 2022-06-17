@@ -2,6 +2,8 @@
 
 # JAVA
 
+-Banco de dados utilizado é o H2Database, executando em memória, não persistindo nada no FS(FileSystem).
+
 -Link de acesso ao Swagger da API, pode ser consumida via POSTMAN
 https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
 
