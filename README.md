@@ -21,6 +21,12 @@ https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
 
 7-#git push origin [master ou main]
 
+8-Visualizar logs no CLI do heroku:
+
+ 8.1-#heroku logs --tail
+
+ 8.2-Basta efetuar requisição REST via postman ou pela aplicação angular, que irá aparecer no CLI do heroku.
+
 
 # Angular
 
