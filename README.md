@@ -4,7 +4,7 @@ Curso Full Stack: Agular9 + SpringBoot 2.2
 # Referências utilizadas para efetuar o deploy da aplicação no provedor de cloud free, HEROKU.
 https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creating-a-spring-boot-app
 
-#Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
+# Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
 
 1-Considere que a pasta .git esta na raiz do grupo de projetos, no caso ai temos o projeto clientes-api(Java/SpringBoot), clientes-app(Angular).
 
