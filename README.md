@@ -49,6 +49,11 @@ https://medium.com/geekculture/how-to-easily-deploy-your-first-angular-app-on-he
 3-Visualizar logs no CLI do heroku:
 
  3.1-#heroku logs -t --app clientes-app-sfidencio
+ 
+ 
+4-Finalmente a URL de acesso da aplicação clientes-app-sfidencio, desenvolvida utilizando Angular:
+
+  4.1-https://clientes-app-sfidencio.herokuapp.com/
 
 
 
