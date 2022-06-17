@@ -1,12 +1,11 @@
+# Curso Full Stack: Agular9 + SpringBoot 2.2
+
 # JAVA
 
-# Link de acesso ao Swagger da API, pode ser consumida via POSTMAN
+-Link de acesso ao Swagger da API, pode ser consumida via POSTMAN
 https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
 
-# curso-douglas-udemy-angular9-springboot22-fullstack-atualizado
-Curso Full Stack: Agular9 + SpringBoot 2.2
-
-# Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
+-Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
 
 1-Considere que a pasta .git esta na raiz do grupo de projetos, no caso ai temos o projeto clientes-api(Java/SpringBoot), clientes-app(Angular).
 
