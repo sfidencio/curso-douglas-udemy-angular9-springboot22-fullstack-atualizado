@@ -1,7 +1,7 @@
 # curso-douglas-udemy-angular9-springboot22-fullstack-atualizado
 Curso Full Stack: Agular9 + SpringBoot 2.2
 
-# Referências utilizadas para efetuar o deploy da aplicação no provedor de cloud gratuíto.
+# Referências utilizadas para efetuar o deploy da aplicação no provedor de cloud free, HEROKU.
 https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creating-a-spring-boot-app
 
 #Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
