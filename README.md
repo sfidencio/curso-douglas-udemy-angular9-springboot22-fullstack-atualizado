@@ -1,8 +1,8 @@
+# Link de acesso ao Swagger da API, pode ser consumida via POSTMAN
+https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
+
 # curso-douglas-udemy-angular9-springboot22-fullstack-atualizado
 Curso Full Stack: Agular9 + SpringBoot 2.2
-
-# Referências utilizadas para efetuar o deploy da aplicação no provedor de cloud free, HEROKU.
-https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creating-a-spring-boot-app
 
 # Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
 
@@ -27,3 +27,5 @@ https://www.treinaweb.com.br/blog/deploy-de-uma-aplicacao-spring-boot-no-heroku
 https://devcenter.heroku.com/articles/heroku-cli
 
 https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creating-a-spring-boot-app
+
+https://www.treinaweb.com.br/blog/documentando-uma-api-spring-boot-com-o-swagger
