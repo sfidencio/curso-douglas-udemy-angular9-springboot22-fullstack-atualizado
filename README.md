@@ -59,6 +59,8 @@ https://medium.com/geekculture/how-to-easily-deploy-your-first-angular-app-on-he
 
 # Referências:
 
+https://www.udemy.com/course/full-stack-angular9-spring-boot
+
 https://gist.github.com/dariye/1cdc25e7a168527f5d035c47f4f9aed3
 
 https://www.treinaweb.com.br/blog/deploy-de-uma-aplicacao-spring-boot-no-heroku
