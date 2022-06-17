@@ -7,7 +7,7 @@ https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku#creat
 #Para realizar deploy de sub-folders de um repositório GIT, deve seguir as dicas abaixo
 1-Considere que a pasta .git esta na raiz do grupo de projetos, no caso ai temos o projeto clientes-api(Java/SpringBoot), clientes-app(Angular).
 
-2-Assin, com CLI do heroku instalado e devidamente logado, e com o projeto de deploy já criado no dashboard do heroku, façamos os seguinte, estando no root_folder do projeto.
+2-Assim, com CLI do heroku instalado e devidamente logado, e com o projeto de deploy já criado no dashboard do heroku, façamos os seguinte, estando no root_folder do projeto.
 
 3-git subtree push --prefix clientes-api/ heroku master # normal push
 
