@@ -11,7 +11,7 @@ https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
 
 2-Assim, com CLI do heroku instalado e devidamente logado, e com o projeto de deploy já criado no dashboard do heroku, façamos os seguinte, estando no root_folder do projeto.
 
-  2.1-heroku git:remote -a clientes-app-sfidencio  (Observe que aqui apontamos pra qual repositório criamos no dashboard do heroku)
+  2.1-heroku git:remote -a clientes-api-sfidencio  (Observe que aqui apontamos pra qual repositório criamos no dashboard do heroku)
 
   2.2-git subtree push --prefix clientes-api/ heroku master # normal push
 
