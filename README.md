@@ -37,7 +37,9 @@ https://medium.com/geekculture/how-to-easily-deploy-your-first-angular-app-on-he
 2-Não esquecer de mudar o arquivo "enviroment.prod.ts", colocar a url_base da API hospedada no heroku.
 
 
-Referências:
+
+
+# Referências:
 
 https://gist.github.com/dariye/1cdc25e7a168527f5d035c47f4f9aed3
 
