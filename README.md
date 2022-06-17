@@ -16,6 +16,9 @@ Curso Full Stack: Agular9 + SpringBoot 2.2
 
 5-git push heroku 'git subtree split --prefix clientes-api/ branch':master --force # force push
 
+6-Depois, faça o push normal para o repositório do github, pois o push do passo 4 e 5, envia para o repos da aplicação no heroku.
+
+7-#git push origin [master ou main]
 
 
 Referências:
