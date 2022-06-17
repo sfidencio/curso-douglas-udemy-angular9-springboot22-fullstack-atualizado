@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url_base: "http://localhost:8081"
+  url_base: "https://clientes-api-sfidencio.herokuapp.com"
 };
