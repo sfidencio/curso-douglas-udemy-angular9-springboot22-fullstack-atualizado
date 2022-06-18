@@ -11,6 +11,7 @@ import { Cliente } from './clientes/cliente';
 export class ClientesService {
 
   api?: string = "/api/v1/clientes";
+  //json_str!: string;
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +24,14 @@ export class ClientesService {
   }
 
   salvar(cliente: Cliente): Observable<Cliente> {
+    /*this.json_str = localStorage.getItem('access_token')!.toString();
+    const access_token_json = JSON.parse(this.json_str);
+
+    const headersApp = {
+      'Authorization': 'Bearer ' + access_token_json.access_token,
+      'Content-Type': 'application/json'
+    }*/
+
     if (cliente.id) {
       return this.http.put<Cliente>(environment.url_base + this.api + "/" + `${cliente.id}`, cliente);
     } else {
@@ -35,6 +44,13 @@ export class ClientesService {
   }
 
   getAllClientes(): Observable<Cliente[]> {
+    /*this.json_str = localStorage.getItem('access_token')!.toString();
+    const access_token_json = JSON.parse(this.json_str);
+
+    const headersApp = {
+      'Authorization': 'Bearer ' + access_token_json.access_token,
+      'Content-Type': 'application/json'
+    }*/
     return this.http.get<Cliente[]>(environment.url_base + this.api);
   }
 

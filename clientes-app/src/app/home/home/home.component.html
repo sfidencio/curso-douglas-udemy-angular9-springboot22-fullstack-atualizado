@@ -33,10 +33,12 @@
           <a class="dropdown-item" href="#" routerLink="/">Home</a>
           <a class="dropdown-item" href="#" routerLink="/lista-cliente">Clientes</a>
           <a class="dropdown-item" href="#" routerLink="/lista-prestacao-servicos">Prestação de Serviços</a>
-          <a class="dropdown-item" href="#" routerLink="/login">Logoff</a>
+          <!--<a class="dropdown-item" href="#" (click)="efetuarLogoff($event)">Logoff</a>-->
         </div>
       </li>
     </ul>
+    <button type="button" class="btn btn-danger" (click)="efetuarLogoff($event)">Logoff</button>
   </nav>
 </body>
+
 </html>

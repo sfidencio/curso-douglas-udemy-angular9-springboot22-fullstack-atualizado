@@ -5,7 +5,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 @Entity
@@ -25,6 +24,6 @@ public class Usuario {
     @NotEmpty(message = "{campo.login.obrigatorio}")
     private String login;
     @Column(nullable = false)
-    @NotNull(message = "{campo.senha.obrigatorio}")
+    @NotEmpty(message = "{campo.senha.obrigatorio}")
     private String senha;
 }

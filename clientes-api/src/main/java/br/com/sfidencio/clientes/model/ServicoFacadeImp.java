@@ -1,9 +1,12 @@
 package br.com.sfidencio.clientes.model;
 
+import br.com.sfidencio.clientes.exceptions.BusinessException;
 import br.com.sfidencio.clientes.model.entity.Cliente;
 import br.com.sfidencio.clientes.model.entity.PrestacaoServico;
+import br.com.sfidencio.clientes.model.entity.Usuario;
 import br.com.sfidencio.clientes.model.service.ClienteService;
 import br.com.sfidencio.clientes.model.service.PrestacaoServicoService;
+import br.com.sfidencio.clientes.model.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +22,17 @@ public class ServicoFacadeImp implements ServicoFacade {
     @Autowired
     private PrestacaoServicoService prestacaoServicoService;
 
+    @Autowired
+    private UsuarioService usuarioService;
+
     @Override
-    public Cliente salvarCliente(Cliente cliente) {
+    public Cliente salvarCliente(Cliente cliente) throws BusinessException {
         return this.clienteService.salvar(cliente);
+    }
+
+    @Override
+    public Usuario salvarUsuario(Usuario usuario) throws BusinessException {
+        return this.usuarioService.salvar(usuario);
     }
 
     @Override

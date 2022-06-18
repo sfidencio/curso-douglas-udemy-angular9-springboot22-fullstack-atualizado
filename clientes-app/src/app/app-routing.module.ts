@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { ClientesRoutingModule } from './clientes/clientes-routing.module';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { HomeComponent } from './home/home/home.component';
@@ -8,12 +9,13 @@ import { PrestacaoServicosRoutingModule } from './prestacao-servicos/prestacao-s
 
 const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
-  { path: '', component: HomeComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] }
   //{
   //  path: '', component: HomeComponent, children: [
   //    { path: 'home', component: HomeComponent }
   //  ]
- // }
+  // }
 ];
 
 @NgModule({

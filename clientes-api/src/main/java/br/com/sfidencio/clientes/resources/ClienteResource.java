@@ -1,5 +1,6 @@
 package br.com.sfidencio.clientes.resources;
 
+import br.com.sfidencio.clientes.exceptions.BusinessException;
 import br.com.sfidencio.clientes.model.ServicoFacade;
 import br.com.sfidencio.clientes.model.entity.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,11 @@ public class ClienteResource {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente salvar(@Valid @RequestBody Cliente cliente) {
-        return this.facade.salvarCliente(cliente);
+        try {
+            return this.facade.salvarCliente(cliente);
+        } catch (BusinessException e) {
+            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, e.getMessage());
+        }
     }
 
     /*@PutMapping("{id}")
@@ -69,7 +74,11 @@ public class ClienteResource {
                     clienteAtualizado.setId(cliente.getId());
                     cliente.setNome(clienteAtualizado.getNome());
                     cliente.setCpf(clienteAtualizado.getCpf());
-                    return this.facade.salvarCliente(clienteAtualizado);
+                    try {
+                        return this.facade.salvarCliente(clienteAtualizado);
+                    } catch (BusinessException e) {
+                        throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, e.getMessage());
+                    }
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Erro ao buscar cliente: " + id.toString()));
     }
 }

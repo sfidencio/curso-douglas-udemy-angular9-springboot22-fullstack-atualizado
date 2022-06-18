@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  url_base: "http://localhost:8081"
-  //url_base: "http://localhost:3000"
+  url_base: "http://localhost:8081",
+  //url_base: "http://localhost:3000
+  clientId: "ng-app",
+  clientSecret: "@321",
+  tokenURL: "/oauth/token"
 };
 
 /*

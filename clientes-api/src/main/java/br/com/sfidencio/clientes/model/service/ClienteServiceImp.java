@@ -1,14 +1,13 @@
 package br.com.sfidencio.clientes.model.service;
 
 import br.com.caelum.stella.format.CPFFormatter;
+import br.com.sfidencio.clientes.exceptions.BusinessException;
 import br.com.sfidencio.clientes.model.entity.Cliente;
 import br.com.sfidencio.clientes.model.repository.ClienteRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Objects;
@@ -24,12 +23,15 @@ public class ClienteServiceImp implements ClienteService {
 
 
     @Override
-    public Cliente salvar(Cliente cliente) {
+    public Cliente salvar(Cliente cliente) throws BusinessException {
         CPFFormatter formatter = new CPFFormatter();
         cliente.setCpf(formatter.unformat(cliente.getCpf())); //guardando cpf sem formatacao
-        Optional<Cliente> clienteEncontrado = this.clienteRepository.findByCpf(cliente.getCpf());
+        if (Objects.isNull(cliente.getId()))
+            if (this.clienteRepository.existsByCpf(cliente.getCpf()))
+                throw new BusinessException("Cliente " + cliente.getNome() + " já existe!");
+               /*Optional<Cliente> clienteEncontrado = this.clienteRepository.findByCpf(cliente.getCpf());
         if (clienteEncontrado.isPresent() && Objects.isNull(cliente.getId()))
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cliente já existe: " + clienteEncontrado.get().toString());
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cliente já existe: " + clienteEncontrado.get().toString());*/
         return this.clienteRepository.save(cliente);
     }
 
