@@ -23,7 +23,7 @@ https://clientes-api-sfidencio.herokuapp.com/swagger-ui.html
 
   &emsp;2.4-git push heroku 'git subtree split --prefix clientes-api/ branch':master --force # force push
 
-3-Depois, faça o push normal para o repositório do github, pois o push do passo 4 e 5, envia para o3repos da aplicação no heroku.
+3-Depois, faça o push normal para o repositório do github, pois o push do passo 4 e 5, envia para o repos da aplicação no heroku.
 
 4-#git push origin [master ou main]
 
