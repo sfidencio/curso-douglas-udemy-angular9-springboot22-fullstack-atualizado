@@ -12,13 +12,19 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { TokenInterceptor } from './token.interceptor';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './auth.guard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContatosService } from './contatos.service';
+import { ContatosModule } from './contatos/contatos.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    NotFoundComponent,
   ],
   imports: [
     FormsModule,
@@ -28,12 +34,17 @@ import { TokenInterceptor } from './token.interceptor';
     HomeModule,
     ClientesModule,
     PrestacaoServicosModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ContatosModule
   ],
   providers: [
     ClientesService,
     PrestacaoServicosService,
     AuthService,
+    AuthGuard,
+    ContatosService,
+    TokenInterceptor,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

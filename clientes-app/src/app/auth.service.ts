@@ -19,8 +19,8 @@ export class AuthService {
     return this.http.post<Usuario>(environment.url_base + this.api, usuario);
   }
 
-  isAuthenticade(): boolean {
-    console.info('teste =>' + this.obterToken())
+  isAutenticado(): boolean {
+    //console.info('teste =>' + this.obterToken())
     const token: any = this.obterToken();
     if (token) {
       const isExpired = this.JwtHelper.isTokenExpired(token);
@@ -29,12 +29,20 @@ export class AuthService {
     return false;
   }
 
+  obterUsuarioLogado() {
+    return localStorage.getItem('usuario_logado');
+  }
+
   obterToken() {
     const tokenString = localStorage.getItem('access_token');
     if (tokenString) {
       const token = JSON.parse(tokenString).access_token;
       return token;
     }
+  }
+
+  invalidarSessao() {
+    localStorage.removeItem('access_token');
   }
 
   tentarLogar(username: string, password: string): Observable<any> {

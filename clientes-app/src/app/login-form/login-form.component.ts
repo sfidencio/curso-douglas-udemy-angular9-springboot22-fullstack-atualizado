@@ -23,6 +23,8 @@ export class LoginFormComponent implements OnInit {
   constructor(private route: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
+    if (this.auth.isAutenticado())
+      this.route.navigate(['/home']);
   }
 
   onSubmit() {
@@ -57,13 +59,14 @@ export class LoginFormComponent implements OnInit {
         //this.route.navigate(['/lista-cliente']);
         console.log(c)
         this.cadastrando = false;
-        this.login = "";
-        this.senha = "";
         this.mensagem = `Usuário ${this.login} logado com sucesso!`;
         //this.mensagem = "Usuário logado com sucesso!";
-        localStorage.setItem('access_token', JSON.stringify(c))
+        localStorage.setItem('access_token', JSON.stringify(c));
+        localStorage.setItem('usuario_logado', this.login)
         if (c)
           this.route.navigate(['/']);
+        this.login = "";
+        this.senha = "";
 
       },
       error: (e) => {
@@ -77,6 +80,7 @@ export class LoginFormComponent implements OnInit {
         console.info(e.error.erros);
         this.cadastrando = false;
         //console.error(e)
+        this.auth.invalidarSessao();
       },
       complete: () => {
         console.info('complete')

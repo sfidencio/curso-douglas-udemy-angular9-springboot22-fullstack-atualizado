@@ -9,6 +9,7 @@ import { HomeModule } from '../home/home.module';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ClientesListaComponent } from './clientes-lista/clientes-lista.component';
 
+
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };
